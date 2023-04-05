@@ -2,7 +2,7 @@
 # Example file for working with functions
 # LinkedIn Learning Python course by Joe Marini
 #
-
+#functions are objects that can be passed
 
 # define a basic function
 def func1():

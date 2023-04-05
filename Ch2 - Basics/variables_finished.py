@@ -10,7 +10,7 @@ myfloat = 13.2
 mystr = "This is a string"
 mybool = True
 mylist = [0, 1, "two", 3.2, False]
-mytuple = (0, 1, 2)
+mytuple = (0, 1, 2) # immutable
 mydict = {"one" : 1, "two" : 2}
 
 print(myint)
@@ -41,13 +41,18 @@ print(mydict["one"])
 print ("string type " + str(123))
 
 # Global vs. local variables in functions
-def someFunction():
+def someFunction(mystr):
     #global mystr
+    mystr=mystr
+    print(mystr)
+    del mystr
     mystr = "def"
     print (mystr)
+    return mystr
 
-someFunction()
+myst=someFunction(mystr)
 print (mystr) 
 
 del mystr
-print (mystr)
+#nameError
+print (myst)
